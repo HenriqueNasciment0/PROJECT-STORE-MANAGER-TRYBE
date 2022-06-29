@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do Projeto Store Manager! 
+# Boas-vindas ao repositório do Projeto Store Manager
 
 Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
@@ -13,7 +13,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary>
 
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
+  Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
 
   Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
 
@@ -33,11 +33,12 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary><strong>🗓 Data de Entrega</strong></summary>
 
-  - Este projeto é individual
-  - Serão `6` dias de projeto
-  - Data de entrega para avaliação final do projeto: `13/07/2022 14:10`
+- Este projeto é individual
+- Serão `6` dias de projeto
+- Data de entrega para avaliação final do projeto: `13/07/2022 14:10`
 
     <br />
+
 </details>
 
  <br />
@@ -47,41 +48,43 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary><strong>:whale: Rodando no Docker vs Localmente</strong></summary>
 
-  ## 👉 Com Docker
+## 👉 Com Docker
 
   **:warning: Antes de começar, seu docker-compose precisa estar na versão 1.29 ou superior. [Veja aqui](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt) ou [na documentação](https://docs.docker.com/compose/install/) como instalá-lo. No primeiro artigo, você pode substituir onde está com `1.26.0` por `1.29.2`.**
 
   > :information_source: Rode os serviços `node` e `db` com o comando `docker-compose up -d`.
-  - Lembre-se de parar o `mysql` se estiver usando localmente na porta padrão (`3306`), ou adapte, caso queria fazer uso da aplicação em containers;
-  - Esses serviços irão inicializar um container chamado `store_manager` e outro chamado `store_manager_db`;
-  - A partir daqui você pode rodar o container `store_manager` via CLI ou abri-lo no VS Code.
 
-  >  :information_source: Use o comando `docker exec -it store_manager bash`.
-  - Ele te dará acesso ao terminal interativo do container criado pelo compose, que está rodando em segundo plano.
+- Lembre-se de parar o `mysql` se estiver usando localmente na porta padrão (`3306`), ou adapte, caso queria fazer uso da aplicação em containers;
+- Esses serviços irão inicializar um container chamado `store_manager` e outro chamado `store_manager_db`;
+- A partir daqui você pode rodar o container `store_manager` via CLI ou abri-lo no VS Code.
+
+  > :information_source: Use o comando `docker exec -it store_manager bash`.
+
+- Ele te dará acesso ao terminal interativo do container criado pelo compose, que está rodando em segundo plano.
 
   > :information_source: Instale as dependências [**Caso existam**] com `npm install`
 
-  - **:warning: Atenção:** Caso opte por utilizar o Docker, **TODOS** os comandos disponíveis no `package.json` (npm start, npm test, npm run dev, ...) devem ser executados **DENTRO** do container, ou seja, no terminal que aparece após a execução do comando `docker exec` citado acima. 
+- **:warning: Atenção:** Caso opte por utilizar o Docker, **TODOS** os comandos disponíveis no `package.json` (npm start, npm test, npm run dev, ...) devem ser executados **DENTRO** do container, ou seja, no terminal que aparece após a execução do comando `docker exec` citado acima.
 
-  - **:warning: Atenção:** O **git** dentro do container não vem configurado com suas credenciais. Ou faça os commits fora do container, ou configure as suas credenciais do git dentro do container.
+- **:warning: Atenção:** O **git** dentro do container não vem configurado com suas credenciais. Ou faça os commits fora do container, ou configure as suas credenciais do git dentro do container.
 
-  - **:warning: Atenção:** Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
+- **:warning: Atenção:** Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
 
-  - ✨ **Dica:** A extensão `Remote - Containers` (que estará na seção de extensões recomendadas do VS Code) é indicada para que você possa desenvolver sua aplicação no container Docker direto no VS Code, como você faz com seus arquivos locais.
+- ✨ **Dica:** A extensão `Remote - Containers` (que estará na seção de extensões recomendadas do VS Code) é indicada para que você possa desenvolver sua aplicação no container Docker direto no VS Code, como você faz com seus arquivos locais.
 
   ![sequelize test](./public/remote-container.png)
 
  <br />
 
-  ## 👉 Sem Docker
+## 👉 Sem Docker
 
   > :information_source: Instale as dependências [**Caso existam**] com `npm install`
 
-  - **:warning: Atenção:** Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
+- **:warning: Atenção:** Não rode o comando npm audit fix! Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.
 
-  - **:warning: Atenção:** Não esqueça de renomear/configurar o arquivo `.env.example` para os testes locais funcionarem.
-  - **:warning: Atenção:** Para rodar o projeto desta forma, **obrigatoriamente** você deve ter o `Node.js` instalado em seu computador.
-  - **:warning: Atenção:** A versão do `Node.js` e `NPM` a ser utilizada é `"node": ">=16.0.0"` e `"npm": ">=7.0.0"`, como descrito a chave `engines` no arquivo `package.json`
+- **:warning: Atenção:** Não esqueça de renomear/configurar o arquivo `.env.example` para os testes locais funcionarem.
+- **:warning: Atenção:** Para rodar o projeto desta forma, **obrigatoriamente** você deve ter o `Node.js` instalado em seu computador.
+- **:warning: Atenção:** A versão do `Node.js` e `NPM` a ser utilizada é `"node": ">=16.0.0"` e `"npm": ">=7.0.0"`, como descrito a chave `engines` no arquivo `package.json`
 
   <br/>
 </details>
@@ -91,54 +94,53 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   1. Clone o repositório
 
-  - `git clone git@github.com:betrybe/sd-019-c-store-manager.git`;
+- `git clone git@github.com:betrybe/sd-019-c-store-manager.git`;
 
-  - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-019-c-store-manager`
+- Entre na pasta do repositório que você acabou de clonar:
+  - `cd sd-019-c-store-manager`
 
   2. Instale as dependências [**Caso existam**]
 
-  - `npm install`
+- `npm install`
 
-  #### :warning: ATENÇÃO: Não rode o comando `npm audit fix`! *Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador.*
-
+#### :warning: ATENÇÃO: Não rode o comando `npm audit fix`! _Ele atualiza várias dependências do projeto, e essa atualização gera conflitos com o avaliador._
 
   3. Crie uma branch a partir da branch `master`
 
-  - Verifique que você está na branch `master`
-    - Exemplo: `git branch`
-  - Se não estiver, mude para a branch `master`
-    - Exemplo: `git checkout master`
-  - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-sd-019-c-store-manager`
+- Verifique que você está na branch `master`
+  - Exemplo: `git branch`
+- Se não estiver, mude para a branch `master`
+  - Exemplo: `git checkout master`
+- Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
+  - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
+  - Exemplo: `git checkout -b joaozinho-sd-019-c-store-manager`
 
   4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
 
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-      - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  - Faça o `commit` inicial
-    - Exemplo:
-      - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+- Verifique que as mudanças ainda não estão no _stage_
+  - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
+- Adicione o novo arquivo ao _stage_ do Git
+  - Exemplo:
+    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+    - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
+- Faça o `commit` inicial
+  - Exemplo:
+    - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
+    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
   5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
-  - Usando o exemplo anterior: `git push -u origin joaozinho-sd-019-c-store-manager`
+- Usando o exemplo anterior: `git push -u origin joaozinho-sd-019-c-store-manager`
 
   6. Crie um novo `Pull Request` _(PR)_
 
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-019-c-store-manager/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-019-c-store-manager/pulls) e confira que o seu _Pull Request_ está criado
+- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-019-c-store-manager/pulls)
+- Clique no botão verde _"New pull request"_
+- Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+- Clique no botão verde _"Create pull request"_
+- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
+- **Não se preocupe em preencher mais nada por enquanto!**
+- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-019-c-store-manager/pulls) e confira que o seu _Pull Request_ está criado
 
   <br />
 </details>
@@ -146,13 +148,13 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary><strong>⌨️ Durante o desenvolvimento</strong></summary>
 
-  #### :warning: PULL REQUESTS COM ISSUES NO LINTER NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!
+#### :warning: PULL REQUESTS COM ISSUES NO LINTER NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO
 
-  * Faça `commits` das alterações que você fizer no código regularmente
+- Faça `commits` das alterações que você fizer no código regularmente
 
-  * Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
 
-  * Os comandos que você utilizará com mais frequência são:
+- Os comandos que você utilizará com mais frequência são:
     1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
     2. `git add` _(para adicionar arquivos ao stage do Git)_
     3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
@@ -167,10 +169,10 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   Para **"entregar"** seu projeto, siga os passos a seguir:
 
-  * Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-    * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-    * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-    * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
+- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
+  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
+  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
+  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
 
   Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
@@ -194,17 +196,18 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   > :information_source: IMPORTANTE
 
-  - Usaremos o [Jest](https://jestjs.io/pt-BR/) e o [Frisby](https://docs.frisbyjs.com/) para fazer os testes de API.
-  - Na seção [Informações Importantes](#informacao-importante), está especificado como a conexão deve ser feita, para que os testes rodem.
-  - Este projeto já vem configurado e com suas dependências.
-  - Para poder executar os testes basta executar comando `npm test` *(lembre-se de que se estiver usando Docker, rodar esse comando dentro do container)*
+- Usaremos o [Jest](https://jestjs.io/pt-BR/) e o [Frisby](https://docs.frisbyjs.com/) para fazer os testes de API.
+- Na seção [Informações Importantes](#informacao-importante), está especificado como a conexão deve ser feita, para que os testes rodem.
+- Este projeto já vem configurado e com suas dependências.
+- Para poder executar os testes basta executar comando `npm test` _(lembre-se de que se estiver usando Docker, rodar esse comando dentro do container)_
 
-  ### :eyes: De olho na Dica: executando os testes
+### :eyes: De olho na Dica: executando os testes
 
   Para este projeto você pode rodar os testes das seguintes maneiras.
-  - Executando todos: `npm test`
-  - Executando um por vez: `npm test req02`
-  - **:warning: Atenção:** lembre-se de que se estiver usando Docker, rodar esse comando dentro do container.
+
+- Executando todos: `npm test`
+- Executando um por vez: `npm test req02`
+- **:warning: Atenção:** lembre-se de que se estiver usando Docker, rodar esse comando dentro do container.
 
   <br />
 </details>
@@ -226,29 +229,30 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary id="informacao-importante"><strong>⚠️ Informações importantes sobre o projeto</strong></summary>
 
-  - A pessoa usuária, independente de cadastro, deve conseguir:
-    - Adicionar, ler, deletar e atualizar produtos;
-    - Enviar vendas para o sistema e essas vendas devem validar se o produto em questão existe;
-    - Ler, deletar e atualizar vendas.
+- A pessoa usuária, independente de cadastro, deve conseguir:
+  - Adicionar, ler, deletar e atualizar produtos;
+  - Enviar vendas para o sistema e essas vendas devem validar se o produto em questão existe;
+  - Ler, deletar e atualizar vendas.
 
-  - Para **todos os endpoints** garanta que:
-    - Caso o recurso **não seja encontrado**, **aconteça um erro** ou **haja dados inválidos** na sua requisição, sua API deve retornar o status HTTP adequado com o body `{ message: <mensagem de erro> }`;
-    - Garanta que seus endpoints sempre retornem uma resposta, havendo sucesso nas operações ou não;
-    - Garanta que seus endpoints sempre retornem os códigos de status corretos *(recurso criado, erro de validação, autorização, etc)*.
-    - Use os verbos HTTP adequados para cada operação;
-    - Agrupe e padronize suas URL em cada recurso;
+- Para **todos os endpoints** garanta que:
+  - Caso o recurso **não seja encontrado**, **aconteça um erro** ou **haja dados inválidos** na sua requisição, sua API deve retornar o status HTTP adequado com o body `{ message: <mensagem de erro> }`;
+  - Garanta que seus endpoints sempre retornem uma resposta, havendo sucesso nas operações ou não;
+  - Garanta que seus endpoints sempre retornem os códigos de status corretos _(recurso criado, erro de validação, autorização, etc)_.
+  - Use os verbos HTTP adequados para cada operação;
+  - Agrupe e padronize suas URL em cada recurso;
 
-  - Cada camada da sua API deve estar em seu respectivo diretório:
-    - A camada **Models** deve estar no diretório de nome `models`;
-    - A camada **Services** deve estar no diretório de nome `services`;
-    - A camada **Controllers** deve estar no diretório de nome `controllers`;
-    - Os **Middlewares** devem estar no diretório de nome `middlewares`.
+- Cada camada da sua API deve estar em seu respectivo diretório:
+  - A camada **Models** deve estar no diretório de nome `models`;
+  - A camada **Services** deve estar no diretório de nome `services`;
+  - A camada **Controllers** deve estar no diretório de nome `controllers`;
+  - Os **Middlewares** devem estar no diretório de nome `middlewares`.
 
   **:warning: Atenção:** Os diretórios já estão criados, não altere os nomes, não os mova de lugar e nem os deixe vazios. Você pode criar mais diretórios como `utils`, `helpers`, `database`... entre outros, mas não alterar os citados acima.
 
-  - Em suas models:
-    - Colocar o nome do banco de dados antes do nome da tabela, **ex: `banco_de_dados.tabela`**;
-    - Atente-se a detalhes de digitação em seu código. Qualquer diferença em nomes, apelidos, CAIXA ALTA ou caixa baixa podem invalidar suas respostas.
+- Em suas models:
+  - Colocar o nome do banco de dados antes do nome da tabela, **ex: `banco_de_dados.tabela`**;
+  - Atente-se a detalhes de digitação em seu código. Qualquer diferença em nomes, apelidos, CAIXA ALTA ou caixa baixa podem invalidar suas respostas.
+
     ```SQL
       -- exemplo de escrita de query
       SELECT * FROM StoreManager.products;
@@ -256,9 +260,10 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   ---
 
-  ### :warning: Atenção aos arquivos entregues
+### :warning: Atenção aos arquivos entregues
 
-  - Há um arquivo `app.js` no repositório, não remova o seguinte trecho de código:
+- Há um arquivo `app.js` no repositório, não remova o seguinte trecho de código:
+
     ```javascript
       app.get('/', (request, response) => {
         response.send();
@@ -266,10 +271,11 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
       module.exports = app;
     ```
-    - Isso está configurado para o avaliador funcionar;
-    - É neste arquivo que você irá configurar suas rotas.
+  - Isso está configurado para o avaliador funcionar;
+  - É neste arquivo que você irá configurar suas rotas.
 
-  - Há um arquivo `index.js` no repositório, não altere a seguinte estrutura:
+- Há um arquivo `index.js` no repositório, não altere a seguinte estrutura:
+
     ```Javascript
       const app = require('./app');
       require('dotenv').config();
@@ -280,13 +286,14 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
         console.log(`Escutando na porta ${process.env.PORT}`);
       });
     ```
-    - Isso está configurado para tornar os testes unitários mais fáceis de serem executados.
+  - Isso está configurado para tornar os testes unitários mais fáceis de serem executados.
 
   ---
 
-  ### :warning: Atenção aos arquivos de variáveis de ambiente
+### :warning: Atenção aos arquivos de variáveis de ambiente
 
-  - Para os testes rodarem corretamente, na raiz do projeto **renomeie o arquivo `.env.example` para `.env`** com as variáveis de ambiente. Por exemplo, caso o seu usuário SQL seja `nome` e a senha `1234` seu arquivo ficará desta forma:
+- Para os testes rodarem corretamente, na raiz do projeto **renomeie o arquivo `.env.example` para `.env`** com as variáveis de ambiente. Por exemplo, caso o seu usuário SQL seja `nome` e a senha `1234` seu arquivo ficará desta forma:
+
     ```sh
       MYSQL_HOST=localhost
       MYSQL_USER=nome
@@ -294,10 +301,11 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
       MYSQL_DATABASE=StoreManager
       PORT=3000
     ```
-    - **Variáveis de ambiente além das especificadas acima não são suportadas, pois não são esperadas pelo avaliador do projeto.**
-      - A variável **PORT** do arquivo `.env` deve ser utilizada para a conexão com o servidor. É importante utilizar essa variável para os testes serem executados corretamente tanto na máquina local quanto no avaliador.
-    - Com essas configurações, enquanto estiver na máquina local, o banco será executado normalmente via localhost (possibilitando os testes via `npm test`).
+  - **Variáveis de ambiente além das especificadas acima não são suportadas, pois não são esperadas pelo avaliador do projeto.**
+    - A variável **PORT** do arquivo `.env` deve ser utilizada para a conexão com o servidor. É importante utilizar essa variável para os testes serem executados corretamente tanto na máquina local quanto no avaliador.
+  - Com essas configurações, enquanto estiver na máquina local, o banco será executado normalmente via localhost (possibilitando os testes via `npm test`).
     Como o arquivo `.env` não será enviado para o GitHub (não se preocupe com isso, pois já está configurado no `.gitignore`), o avaliador utilizará as suas próprias variáveis de ambiente.
+
     ```javascript
     require('dotenv').config(); // não se esqueça de configurar suas variáveis de ambiente aqui na configuração
 
@@ -315,15 +323,15 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary id="dicas"><strong>👀 Dicas</strong></summary>
 
-  - Para gerar os objetos de erro personalizados, você pode utilizar uma biblioteca de erros, como o [`boom`](https://www.npmjs.com/package/@hapi/boom) ou [`restify-errors`](https://www.npmjs.com/package/restify-errors);
+- Para gerar os objetos de erro personalizados, você pode utilizar uma biblioteca de erros, como o [`boom`](https://www.npmjs.com/package/@hapi/boom) ou [`restify-errors`](https://www.npmjs.com/package/restify-errors);
 
-  - Você pode utilizar middlewares e objetos de erro personalizados para que não tenha que repetir a lógica de tratamento de erro em vários lugares. Não se esqueça também do [`express-rescue`](https://www.npmjs.com/package/express-rescue), ele pode facilitar muito o trabalho de tratar erros;
+- Você pode utilizar middlewares e objetos de erro personalizados para que não tenha que repetir a lógica de tratamento de erro em vários lugares. Não se esqueça também do [`express-rescue`](https://www.npmjs.com/package/express-rescue), ele pode facilitar muito o trabalho de tratar erros;
 
-  - Quando estiver na dúvida sobre qual status HTTP utilizar, você pode consultar a [documentação sobre o assunto no MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status). Com o tempo, você vai lembrar com facilidade o significado dos códigos mais comuns;
+- Quando estiver na dúvida sobre qual status HTTP utilizar, você pode consultar a [documentação sobre o assunto no MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status). Com o tempo, você vai lembrar com facilidade o significado dos códigos mais comuns;
 
-  - Para realizar a validação dos dados, você pode utilizar pacotes como [`Joi`](https://www.npmjs.com/package/joi) ou o [`Expresso Validator`](https://www.npmjs.com/package/@expresso/validator). Caso prefira, você também pode realizar a validação de forma manual.
+- Para realizar a validação dos dados, você pode utilizar pacotes como [`Joi`](https://www.npmjs.com/package/joi) ou o [`Expresso Validator`](https://www.npmjs.com/package/@expresso/validator). Caso prefira, você também pode realizar a validação de forma manual.
 
-  - Para este projeto, é importante recorrer a leitura e fazer os exercícios do dia [Arquitetura de Software - Camada de Controller e Service](https://app.betrybe.com/course/back-end/nodejs-camada-de-servico-e-arquitetura-rest-e-restful/arquitetura-de-software-camada-de-controller-e-service/f8eeda7e-dd20-4a59-a0d9-3d4ec20729bc) *(Especialmente a seção `Bônus` > `Inserindo dados em mais de uma tabela`)*
+- Para este projeto, é importante recorrer a leitura e fazer os exercícios do dia [Arquitetura de Software - Camada de Controller e Service](https://app.betrybe.com/course/back-end/nodejs-camada-de-servico-e-arquitetura-rest-e-restful/arquitetura-de-software-camada-de-controller-e-service/f8eeda7e-dd20-4a59-a0d9-3d4ec20729bc) *(Especialmente a seção `Bônus` > `Inserindo dados em mais de uma tabela`)*
 
   <br />
 </details>
@@ -331,7 +339,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details>
   <summary id="diagrama-scripts"><strong>🎲 Diagrama ER, Entidades e Scripts</strong></summary>
 
-  #### Diagrama de Entidade-Relacionamento
+#### Diagrama de Entidade-Relacionamento
 
   Para orientar a manipulação das tabelas, utilize o DER a seguir:
 
@@ -339,69 +347,77 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   ---
 
-  #### Tabelas
+#### Tabelas
 
-  O banco terá três tabelas: 
-  - A tabela `products`, com os atributos `id` e `name`;
-  - A tabela `sales`, com os atributos `id` e `date`;
-  - A tabela `sales_products`, com os atributos `sale_id`, `product_id` e `quantity`;
-  - O script de criação do banco de dados pode ser visto [aqui](migration.sql);
-  - O script que popula o banco de dados pode ser visto [aqui](seed.sql);
+  O banco terá três tabelas:
+
+- A tabela `products`, com os atributos `id` e `name`;
+- A tabela `sales`, com os atributos `id` e `date`;
+- A tabela `sales_products`, com os atributos `sale_id`, `product_id` e `quantity`;
+- O script de criação do banco de dados pode ser visto [aqui](migration.sql);
+- O script que popula o banco de dados pode ser visto [aqui](seed.sql);
 
   **:warning: Atenção:** Não exclua, altere ou mova de lugar os arquivos `migration.sql` e `seed.sql`, eles são usados para realizar os testes. Qualquer dúvida sobre estes arquivos procure a monitoria no Slack ou nas mentorias.
 
-  A tabela `products` tem o seguinte formato: *(O id será gerado automaticamente)*
+  A tabela `products` tem o seguinte formato: _(O id será gerado automaticamente)_
 
   ![Tabela Produtos](./public/tableproducts.png)
 
-  A tabela `sales` tem o seguinte formato: *(O id e date são gerados automaticamente)*
+  A tabela `sales` tem o seguinte formato: _(O id e date são gerados automaticamente)_
 
   ![Tabela Vendas](./public/tablesales.png)
 
-
-  A tabela `sales_products`, é a tabela que faz o relacionamento `N:N` entre `products` e `sales` e tem o seguinte formato: *(O produto e a venda são deletados automaticamente)*
+  A tabela `sales_products`, é a tabela que faz o relacionamento `N:N` entre `products` e `sales` e tem o seguinte formato: _(O produto e a venda são deletados automaticamente)_
 
   ![Tabela Vendas-Produtos](./public/tablesalesproducts.png)
 
   > :warning:️ Em caso de dúvidas, consulte os conteúdos:
+  >
   > - [Arquitetura de Software - Camada de Model](https://app.betrybe.com/course/back-end/nodejs-camada-de-servico-e-arquitetura-rest-e-restful/arquitetura-de-software-camada-de-model/69147096-f19d-4ab4-a839-906359d79172/o-que-vamos-aprender/989bb9ca-4adb-4b12-a26e-4f74c26c2e90?use_case=calendar)
   > - [Arquitetura de Software - Camada de Controller e Service](https://app.betrybe.com/course/back-end/nodejs-camada-de-servico-e-arquitetura-rest-e-restful/arquitetura-de-software-camada-de-controller-e-service/f8eeda7e-dd20-4a59-a0d9-3d4ec20729bc/o-que-vamos-aprender/af063606-77cb-4fbc-9c93-992662283b5a?use_case=side_bar)
 
   ---
 
-  #### Dicas de scripts prontos
+#### Dicas de scripts prontos
 
-  - Criar o banco de dados e gerar as tabelas:
+- Criar o banco de dados e gerar as tabelas:
+
   ```sh
     npm run migration
   ```
 
-  - Limpar e popular o banco de dados:
+- Limpar e popular o banco de dados:
+
   ```sh
     npm run seed
   ```
 
-  - Iniciar o servidor Node:
+- Iniciar o servidor Node:
+
   ```sh
     npm start
   ```
 
-  - Iniciar o servidor Node com nodemon:
+- Iniciar o servidor Node com nodemon:
+
   ```sh
     npm run debug
   ```
 
-  - Executar os testes avaliativos da Trybe:
+- Executar os testes avaliativos da Trybe:
+
   ```sh
     npm test
   ```
 
-  - Executar os testes de unidade escritos por você:
+- Executar os testes de unidade escritos por você:
+
   ```sh
     npm run test:mocha
   ```
 
-  - Executar o linter:
+- Executar o linter:
+
   ```sh
     npm run lint
   ```
@@ -414,10 +430,11 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 <details id="para-escrever-seus-própios-arquivos-de-teste">
   <summary><strong>🔬 Escrevendo testes de unidade</strong></summary><br />
 
-  - Utilize o **mocha**, **chai** e **sinon** para escrever seus testes;
-  - Coloque todos os testes de `models`, `services` e `controllers` dentro da pasta `tests/unit`.
-  - **:warning: Atenção:** Os nomes dos arquivos de testes devem seguir essa estrutura `nomeDoArquivo.test.js`
-  - **✨ Dica:** Aqui uma sugestão de arquivos para criar os teste de unidade:
+- Utilize o **mocha**, **chai** e **sinon** para escrever seus testes;
+- Coloque todos os testes de `models`, `services` e `controllers` dentro da pasta `tests/unit`.
+- **:warning: Atenção:** Os nomes dos arquivos de testes devem seguir essa estrutura `nomeDoArquivo.test.js`
+- **✨ Dica:** Aqui uma sugestão de arquivos para criar os teste de unidade:
+
   ```tree
   .
   ├─ ...
@@ -434,7 +451,8 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   │            └─ salesModels.test.js
   └─ ...
   ```
-  - **✨ Dica:** Aqui como dica, é interessante começar a escrever seus testes de unidade pela camada de `models`. Outra dica é não escrever todos os testes de uma camada só de uma vez! Ex: Crie a função de listar todos os produtos, escreva o teste da camada de `models`, depois `service`, por último `controllers` e vai para a próxima função...
+
+- **✨ Dica:** Aqui como dica, é interessante começar a escrever seus testes de unidade pela camada de `models`. Outra dica é não escrever todos os testes de uma camada só de uma vez! Ex: Crie a função de listar todos os produtos, escreva o teste da camada de `models`, depois `service`, por último `controllers` e vai para a próxima função...
 
   <br />
 </details>
@@ -472,8 +490,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que é possível listar todos os produtos]**
-    - Ao listar usuários com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível listar todos os produtos]**
+  - Ao listar usuários com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       [
         {
@@ -487,15 +506,17 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
         /* ... */
       ]
     ```
-  
-  - **[Será validado que não é possível listar um produto que não existe]**
-    - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível listar um produto que não existe]**
+  - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Product not found" }
     ```
 
-  - **[Será validado que é possível listar um produto específico com sucesso]**
-    - Ao listar um produto com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível listar um produto específico com sucesso]**
+  - Ao listar um produto com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       {
         "id": 1,
@@ -518,7 +539,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 5%. Ou seja, cada uma das camadas tem de ter, ao menos, 5% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 5%. Ou seja, cada uma das camadas tem de ter, ao menos, 5% de cobertura de testes.]**
 
   <br>
 </details>
@@ -530,6 +551,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 - O endpoint deve ser acessível através do caminho (`/products`);
 - Os produtos enviados devem ser salvos na tabela `products` do banco de dados;
 - O corpo da requisição deverá seguir o formato abaixo:
+
 ```json
   {
     "name": "ProdutoX"
@@ -539,8 +561,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que é possível cadastrar um produto com sucesso]**
-    - Se o produto for criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
+- **[Será validado que é possível cadastrar um produto com sucesso]**
+  - Se o produto for criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
+
     ```json
       {
         "id": 4,
@@ -561,14 +584,16 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que não é possível realizar operações em um produto sem o campo `name`]**
-    - Se a requisição não tiver o campo `name`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400` :
+- **[Será validado que não é possível realizar operações em um produto sem o campo `name`]**
+  - Se a requisição não tiver o campo `name`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400` :
+
     ```json
       { "message": "\"name\" is required" }
     ```
 
-  - **[Será validado que não é possível realizar operações em um produto com o campo `name` menor que 5 caracteres]**
-    - Se a requisição não tiver `name` com pelo menos 5 caracteres, o resultado retornado deverá ser conforme exibido abaixo, com um status http `422`
+- **[Será validado que não é possível realizar operações em um produto com o campo `name` menor que 5 caracteres]**
+  - Se a requisição não tiver `name` com pelo menos 5 caracteres, o resultado retornado deverá ser conforme exibido abaixo, com um status http `422`
+
     ```json
       { "message": "\"name\" length must be at least 5 characters long" }
     ```
@@ -588,7 +613,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 10%. Ou seja, cada uma das camadas tem de ter, ao menos, 10% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 10%. Ou seja, cada uma das camadas tem de ter, ao menos, 10% de cobertura de testes.]**
 
   <br>
 </details>
@@ -601,6 +626,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 - As vendas enviadas devem ser salvas nas tabelas `sales` e `sales_products` do banco de dados;
 - Deve ser possível cadastrar a venda de vários produtos através da uma mesma requisição;
 - O corpo da requisição deverá seguir o formato abaixo:
+
 ```json
   [
     {
@@ -617,38 +643,44 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que não é possível realizar operações em uma venda sem o campo `productId`]**
-    - Se algum dos itens da requisição não tiver o campo `productId`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400`:
+- **[Será validado que não é possível realizar operações em uma venda sem o campo `productId`]**
+  - Se algum dos itens da requisição não tiver o campo `productId`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400`:
+
     ```json
       { "message": "\"productId\" is required" }
     ```
-  
-  - **[Será validado que não é possível realizar operações em uma venda sem o campo `quantity`]**
-    - Se algum dos itens da requisição não tiver o campo `quantity`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400` :
+
+- **[Será validado que não é possível realizar operações em uma venda sem o campo `quantity`]**
+  - Se algum dos itens da requisição não tiver o campo `quantity`, o resultado retornado deverá ser conforme exibido abaixo, com um status http `400` :
+
     ```json
       { "message": "\"quantity\" is required" }
     ```
-  
-  - **[Será validado que não é possível realizar operações em uma venda com o campo `quantity` menor ou igual a 0 (Zero)]**
-    - Se a requisição tiver algum item em que o campo `quantity` seja menor ou igual a zero, o resultado retornado deverá ser conforme exibido abaixo, com um status http `422`
+
+- **[Será validado que não é possível realizar operações em uma venda com o campo `quantity` menor ou igual a 0 (Zero)]**
+  - Se a requisição tiver algum item em que o campo `quantity` seja menor ou igual a zero, o resultado retornado deverá ser conforme exibido abaixo, com um status http `422`
+
     ```json
       { "message": "\"quantity\" must be greater than or equal to 1" }
     ```
 
-  - **[Será validado que não é possível realizar operações em uma venda com o campo `productId` inexistente, em uma requisição com um único item]**
-    - Se o campo `productId` do item da requisição não existir no banco de dados, o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`
+- **[Será validado que não é possível realizar operações em uma venda com o campo `productId` inexistente, em uma requisição com um único item]**
+  - Se o campo `productId` do item da requisição não existir no banco de dados, o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`
+
     ```json
       { "message": "Product not found" }
     ```
 
-  - **[Será validado que não é possível realizar operações em uma venda com o campo `productId` inexistente, em uma requisição com vários items]**
-    - Se a requisição tiver algum item cujo campo `productId` não existe no banco de dados, o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`
+- **[Será validado que não é possível realizar operações em uma venda com o campo `productId` inexistente, em uma requisição com vários items]**
+  - Se a requisição tiver algum item cujo campo `productId` não existe no banco de dados, o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`
+
     ```json
       { "message": "Product not found" }
     ```
-  
-  - **[Será validado que é possível cadastrar uma venda com sucesso]**
-    - Se a venda for criada com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
+
+- **[Será validado que é possível cadastrar uma venda com sucesso]**
+  - Se a venda for criada com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
+
     ```json
       {
         "id": 3,
@@ -682,7 +714,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 15%. Ou seja, cada uma das camadas tem de ter, ao menos, 15% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 15%. Ou seja, cada uma das camadas tem de ter, ao menos, 15% de cobertura de testes.]**
 
   <br>
 </details>
@@ -699,8 +731,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que é possível listar todas as vendas]**
-    - Ao listar vendas com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível listar todas as vendas]**
+  - Ao listar vendas com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       [
         {
@@ -719,15 +752,17 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
         /* ... */
       ]
     ```
-  
-  - **[Será validado que não é possível listar uma venda que não existe]**
-    - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível listar uma venda que não existe]**
+  - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Sale not found" }
     ```
 
-  - **[Será validado que é possível listar uma venda específica com sucesso]**
-    - Ao listar uma venda com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível listar uma venda específica com sucesso]**
+  - Ao listar uma venda com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       [
         {
@@ -760,7 +795,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 20%. Ou seja, cada uma das camadas tem de ter, ao menos, 20% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 20%. Ou seja, cada uma das camadas tem de ter, ao menos, 20% de cobertura de testes.]**
 
   <br>
 </details>
@@ -773,6 +808,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 - Apenas o produto com o `id` presente na URL deve ser atualizado;
 - O corpo da requisição deve ser validado igual no cadastro;
 - O corpo da requisição deverá seguir o formato abaixo:
+
 ```json
   {
     "name": "Martelo do Batman"
@@ -781,15 +817,17 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
-  
-  - **[Será validado que não é possível alterar um produto que não existe]**
-    - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível alterar um produto que não existe]**
+  - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Product not found" }
     ```
 
-  - **[Será validado que é possível alterar um produto com sucesso]**
-    - Se o produto for alterado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível alterar um produto com sucesso]**
+  - Se o produto for alterado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       {
         "id": 1,
@@ -812,7 +850,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 25%. Ou seja, cada uma das camadas tem de ter, ao menos, 25% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 25%. Ou seja, cada uma das camadas tem de ter, ao menos, 25% de cobertura de testes.]**
 
   <br>
 </details>
@@ -826,15 +864,16 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
-  
-  - **[Será validado que não é possível deletar um produto que não existe]**
-    - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível deletar um produto que não existe]**
+  - Se o produto for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Product not found" }
     ```
 
-  - **[Será validado que é possível deletar um produto com sucesso]**
-    - Se o produto for deletado com sucesso não deve ser retornada nenhuma resposta, apenas um status http `204`;
+- **[Será validado que é possível deletar um produto com sucesso]**
+  - Se o produto for deletado com sucesso não deve ser retornada nenhuma resposta, apenas um status http `204`;
 
   <br>
 </details>
@@ -855,7 +894,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 30%. Ou seja, cada uma das camadas tem de ter, ao menos, 30% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 30%. Ou seja, cada uma das camadas tem de ter, ao menos, 30% de cobertura de testes.]**
 
   <br>
 </details>
@@ -869,15 +908,16 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
-  
-  - **[Será validado que não é possível deletar uma venda que não existe]**
-    - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível deletar uma venda que não existe]**
+  - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Sale not found" }
     ```
 
-  - **[Será validado que é possível deletar uma venda com sucesso]**
-    - Se a venda for deletada com sucesso não deve ser retornada nenhuma resposta, apenas um status http `204`;
+- **[Será validado que é possível deletar uma venda com sucesso]**
+  - Se a venda for deletada com sucesso não deve ser retornada nenhuma resposta, apenas um status http `204`;
 
   <br>
 </details>
@@ -896,7 +936,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 35%. Ou seja, cada uma das camadas tem de ter, ao menos, 35% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 35%. Ou seja, cada uma das camadas tem de ter, ao menos, 35% de cobertura de testes.]**
 
   <br>
 </details>
@@ -909,6 +949,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 - Apenas a venda com o `id` presente na URL deve ser atualizada;
 - O corpo da requisição deve ser validado igual no cadastro;
 - O corpo da requisição deverá seguir o formato abaixo:
+
 ```json
   [
     {
@@ -921,17 +962,20 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
     }
   ]
 ```
+
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
-  
-  - **[Será validado que não é possível alterar uma venda que não existe]**
-    - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
+- **[Será validado que não é possível alterar uma venda que não existe]**
+  - Se a venda for inexistente o resultado retornado deverá ser conforme exibido abaixo, com um status http `404`:
+
     ```json
       { "message": "Product not found" }
     ```
 
-  - **[Será validado que é possível alterar uma venda com sucesso]**
-    - Se a venda for alterada com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível alterar uma venda com sucesso]**
+  - Se a venda for alterada com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       "saleId": 1,
         "itemsUpdated": [
@@ -961,7 +1005,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 40%. Ou seja, cada uma das camadas tem de ter, ao menos, 40% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 40%. Ou seja, cada uma das camadas tem de ter, ao menos, 40% de cobertura de testes.]**
 
   <br>
 </details>
@@ -975,6 +1019,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 - Sua aplicação deve ser capaz de retornar um array de produtos que contenham em seu nome termo passado na URL;
 - Sua aplicação deve ser capaz de retornar um array vázio caso nenhum nome satisfaça a busca;
 - O query params da requisição deverá seguir o formato abaixo:
+
   ```js
     http://localhost:PORT/products/search?q=Martelo
   ```
@@ -982,8 +1027,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details>
   <summary><strong>Os seguintes pontos serão avaliados</strong></summary>
 
-  - **[Será validado que é possível buscar um produto pelo `name`]**
-    - Se a buscar for feita com sucesso, o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível buscar um produto pelo `name`]**
+  - Se a buscar for feita com sucesso, o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       // GET /products/search?q=Martelo
 
@@ -995,8 +1041,9 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
       ]
     ```
 
-  - **[Será validado que é possível buscar todos os produtos quando passa a busca vazia]**
-    - Se a buscar for vazia o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+- **[Será validado que é possível buscar todos os produtos quando passa a busca vazia]**
+  - Se a buscar for vazia o resultado retornado deverá ser conforme exibido abaixo, com um status http `200`:
+
     ```json
       // GET /products/search?q=
 
@@ -1012,6 +1059,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
         /* ... */
       ]
     ```
+
 </details>
 
 ---
@@ -1026,7 +1074,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 50%. Ou seja, cada uma das camadas tem de ter, ao menos, 50% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 50%. Ou seja, cada uma das camadas tem de ter, ao menos, 50% de cobertura de testes.]**
 
   <br>
 </details>
@@ -1043,7 +1091,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 <details close>
   <summary>Os seguintes pontos serão avaliados</summary>
 
-  - **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 60%. Ou seja, cada uma das camadas tem de ter, ao menos, 60% de cobertura de testes.]**
+- **[Será validado que a cobertura total das linhas dos arquivos de CADA camada `models`, `services` e `controllers` é maior ou igual a 60%. Ou seja, cada uma das camadas tem de ter, ao menos, 60% de cobertura de testes.]**
 
   <br>
 </details>
