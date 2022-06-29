@@ -1,5 +1,5 @@
 const bodyParser = require('body-parser');
-const Product = require('./controllers/storageController');
+const Product = require('./controllers/productsController');
 
 const app = require('./app');
 require('dotenv').config();
