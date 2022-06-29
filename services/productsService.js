@@ -1,5 +1,11 @@
 const Product = require('../models/productsModel');
 
+const isValid = (name) => {
+  if (!name || typeof name !== 'string') return false;
+
+  return true;
+};
+
 const getAll = async () => {
   const products = await Product.getAll();
 
@@ -16,7 +22,21 @@ const findById = async (id) => {
   return product;
 };
 
+const createProduct = async (name) => {
+  const validatProduct = isValid(name);
+
+  if (!validatProduct) return false;
+
+  const [product] = await Product.createProduct(name);
+
+  return {
+    id: product.id,
+    name,
+  };
+};
+
 module.exports = {
   getAll,
   findById,
+  createProduct,
 };

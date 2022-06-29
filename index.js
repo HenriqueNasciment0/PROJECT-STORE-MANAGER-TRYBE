@@ -12,6 +12,8 @@ app.get('/products', Product.getAll);
 
 app.get('/products/:id', Product.findById);
 
+app.post('/products', Product.createProduct);
+
 app.listen(process.env.PORT, () => {
   console.log(`Escutando na porta ${process.env.PORT}`);
 });
