@@ -1,7 +1,7 @@
 const Product = require('../models/productsModel');
 
 const isValid = (name) => {
-  if (!name || typeof name !== 'string') return false;
+  if (!name || typeof name !== 'string' || name.length < 5) return false;
 
   return true;
 };
