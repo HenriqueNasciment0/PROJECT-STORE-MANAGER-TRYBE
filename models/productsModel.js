@@ -1,4 +1,4 @@
-const connection = require('./connection');
+const connection = require('../helpers/connection');
 
 const getAll = async () => {
   const [products] = await connection.execute(
@@ -27,16 +27,16 @@ const createProduct = async (name) => {
   return [{ id: product.insertId }];
 };
 
-const updateProduct = async (id, name) => {
-  const query = 'UPDATE StoreManager.products SET name = ? WHERE id = ?';
-  const product = await connection.execute(query, [id, name]);
+// const updateProduct = async (id, name) => {
+//   const query = 'UPDATE StoreManager.products SET name = ? WHERE id = ?';
+//   const product = await connection.execute(query, [id, name]);
 
-  return product;
-};
+//   return product;
+// };
 
 module.exports = {
   getAll,
   findById,
   createProduct,
-  updateProduct,
+  // updateProduct,
 };

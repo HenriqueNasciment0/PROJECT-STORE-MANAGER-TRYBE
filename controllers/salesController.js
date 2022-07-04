@@ -12,6 +12,13 @@ const createSales = async (req, res, next) => {
   res.status(201).json(sales);
 };
 
+const getAll = async (_req, res) => {
+  const allSales = await SalesService.getAll();
+
+  res.status(200).json(allSales);
+};
+
 module.exports = {
   createSales,
+  getAll,
 };
