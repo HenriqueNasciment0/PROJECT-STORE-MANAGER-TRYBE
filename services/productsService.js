@@ -35,6 +35,18 @@ const createProduct = async (name) => {
   };
 };
 
+// const updateProduct = async (id, name) => {
+//   const validatProduct = isValid(name);
+
+//   if (!validatProduct) return false;
+
+//   const realProduct = await findById(id);
+
+//   if (!realProduct) {
+//     return res.status(404).json({ message: 'Product not found' });
+//   }
+// };
+
 module.exports = {
   getAll,
   findById,
