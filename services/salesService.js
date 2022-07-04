@@ -45,7 +45,18 @@ const getAll = async () => {
   return sales;
 };
 
+const findById = async (id) => {
+  const sale = await SalesModel.findById(id);
+
+  if (!sale) {
+    return sendError(404, 'Sale not found');
+  }
+
+  return sale;
+};
+
 module.exports = {
   createSales,
   getAll,
+  findById,
 };

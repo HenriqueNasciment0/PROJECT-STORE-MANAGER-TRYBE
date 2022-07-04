@@ -16,6 +16,8 @@ app.get('/products/:id', Product.findById);
 
 app.get('/sales', Sales.getAll);
 
+app.get('/sales/:id', Sales.findById);
+
 app.post('/products', Product.createProduct);
 
 app.post('/sales', Sales.createSales);

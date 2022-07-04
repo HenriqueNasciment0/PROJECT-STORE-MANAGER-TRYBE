@@ -26,8 +26,25 @@ INNER JOIN StoreManager.sales_products
   return data;
 };
 
+const findById = async (id) => {
+  const query = `SELECT sales.date,
+  sales_products.product_id productId,
+  sales_products.quantity
+  FROM StoreManager.sales sales
+  INNER JOIN StoreManager.sales_products sales_products
+  ON sales.id = sales_products.sale_id
+  WHERE id = ?`;
+
+  const [data] = await connection.execute(query, [id]);
+
+  if (data.length === 0) return null;
+
+  return data;
+};
+
 module.exports = {
   createSales,
   createSalesProducts,
   getAll,
+  findById,
 };
