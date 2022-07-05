@@ -22,6 +22,8 @@ app.post('/products', Product.createProduct);
 
 app.post('/sales', Sales.createSales);
 
+app.put('/products/:id', Product.updateProduct);
+
 app.use(customError);
 
 app.listen(process.env.PORT, () => {

@@ -1,9 +1,16 @@
+const sendError = require('../middlewares/sendError');
 const Product = require('../models/productsModel');
 
 const isValid = (name) => {
-  if (!name || typeof name !== 'string' || name.length < 5) return false;
+  if (!name) {
+    return sendError(400, '"name" is required');
+  }
 
-  return true;
+  if (name.length < 5) {
+    return sendError(422, '"name" length must be at least 5 characters long');
+  }
+
+  return {};
 };
 
 const getAll = async () => {
@@ -25,7 +32,7 @@ const findById = async (id) => {
 const createProduct = async (name) => {
   const validatProduct = isValid(name);
 
-  if (!validatProduct) return false;
+  if (validatProduct.error) return validatProduct;
 
   const [product] = await Product.createProduct(name);
 
@@ -35,20 +42,25 @@ const createProduct = async (name) => {
   };
 };
 
-// const updateProduct = async (id, name) => {
-//   const validatProduct = isValid(name);
+const updateProduct = async (id, name) => {
+  const validatProduct = isValid(name);
 
-//   if (!validatProduct) return false;
+  if (validatProduct.error) return validatProduct;
 
-//   const realProduct = await findById(id);
+  const realProduct = await Product.findById(id);
 
-//   if (!realProduct) {
-//     return res.status(404).json({ message: 'Product not found' });
-//   }
-// };
+  if (!realProduct) {
+    return sendError(404, 'Product not found');
+  }
+
+  await Product.updateProduct(id, name);
+
+  return { id, name };
+};
 
 module.exports = {
   getAll,
   findById,
   createProduct,
+  updateProduct,
 };

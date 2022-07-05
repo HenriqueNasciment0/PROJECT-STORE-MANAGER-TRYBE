@@ -27,16 +27,16 @@ const createProduct = async (name) => {
   return [{ id: product.insertId }];
 };
 
-// const updateProduct = async (id, name) => {
-//   const query = 'UPDATE StoreManager.products SET name = ? WHERE id = ?';
-//   const product = await connection.execute(query, [id, name]);
-
-//   return product;
-// };
+const updateProduct = async (id, name) => {
+  const query = 'UPDATE StoreManager.products SET name = ? WHERE id = ?';
+  const [up] = await connection.execute(query, [name, id]); // necessário colocar name e depois id,
+  // na ordem que é chamada na query... perdi um tempo nesse detalhe.
+  return up;
+};
 
 module.exports = {
   getAll,
   findById,
   createProduct,
-  // updateProduct,
+  updateProduct,
 };
