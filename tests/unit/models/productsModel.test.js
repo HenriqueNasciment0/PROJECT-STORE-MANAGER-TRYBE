@@ -14,7 +14,7 @@ describe('Lê todos os produtos no BD', () => {
     it('objeto possui o "id" do produto verificado camada Model', async () => {
       const response = await ProductsModel.findById(1);
 
-      expect(response).to.have.a('object')
+      expect(response).to.have.a.property('id')
     });
 
   });
