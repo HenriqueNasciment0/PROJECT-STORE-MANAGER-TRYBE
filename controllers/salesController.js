@@ -30,8 +30,19 @@ const findById = async (req, res, next) => {
   res.status(200).json(sale);
 };
 
+const deleteSale = async (req, res, next) => {
+  const { id } = req.params;
+
+  const sale = await SalesService.deleteSale(id);
+
+  if (sale.error) return next(sale.error);
+
+  res.status(204).json(sale);
+};
+
 module.exports = {
   createSales,
   getAll,
   findById,
+  deleteSale,
 };
