@@ -86,33 +86,33 @@ describe('Lê o endpoit Products na camada Controller', () => {
 
   describe('quando o payload informado é válido', () => {
 
-      const request = {}
-      const response = {}
+    const request = {}
+    const response = {}
 
-      before(() => {
-        request.body = {
-          "name": "Homem areia"
-        };
+    before(() => {
+      request.body = {
+        "name": "Homem areia"
+      };
 
-        response.status = sinon.stub().returns(response);
-        response.json = sinon.stub().returns();
+      response.status = sinon.stub().returns(response);
+      response.json = sinon.stub().returns();
 
-        sinon.stub(ProductsService, 'createProduct').resolves({
-          "id": 4,
-          "name": "Homem areia"
-        });
+      sinon.stub(ProductsService, 'createProduct').resolves({
+        "id": 4,
+        "name": "Homem areia"
+      });
 
-      })
+    })
 
     after(() => {
       ProductsService.createProduct.restore();
-      })
+    })
 
-      it('é chamado com o código 201', async () => {
-        await ProductsController.createProduct(request, response);
+    it('é chamado com o código 201', async () => {
+      await ProductsController.createProduct(request, response);
 
-        expect(response.status.calledWith(201)).to.be.equal(true);
-      })
+      expect(response.status.calledWith(201)).to.be.equal(true);
+    })
 
   })
 
@@ -145,4 +145,4 @@ describe('Lê o endpoit Products na camada Controller', () => {
     });
   });
 
-})
+});

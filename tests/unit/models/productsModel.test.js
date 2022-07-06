@@ -8,7 +8,7 @@ describe('Lê todos os produtos no BD', () => {
     it('retorna um objeto com todos os produtos camada Model', async () => {
       const response = await ProductsModel.getAll();
 
-      expect(response).to.be.a('array').with.lengthOf(3);
+      expect(response).to.be.a('array');
     });
 
     it('objeto possui o "id" do produto verificado camada Model', async () => {

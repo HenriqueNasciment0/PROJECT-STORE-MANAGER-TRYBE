@@ -84,7 +84,7 @@ describe('Lê todas as vendas na camada Service', () => {
   describe('quando o id buscado não existe', () => {
 
     it('retorna null', async () => {
-      const notId = await ProductsService.findById(5);
+      const notId = await ProductsService.findById(999);
 
       expect(notId).to.be.equal(null);
     })
