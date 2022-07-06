@@ -95,7 +95,7 @@ describe('Lê o endpoit Products na camada Controller', () => {
         };
 
         response.status = sinon.stub().returns(response);
-        response.send = sinon.stub().returns();
+        response.json = sinon.stub().returns();
 
         sinon.stub(ProductsService, 'createProduct').resolves({
           "id": 4,
@@ -111,7 +111,7 @@ describe('Lê o endpoit Products na camada Controller', () => {
       it('é chamado com o código 201', async () => {
         await ProductsController.createProduct(request, response);
 
-        expect(response.statusCode.calledWith(201)).to.be.equal(true);
+        expect(response.status.calledWith(201)).to.be.equal(true);
       })
 
   })
