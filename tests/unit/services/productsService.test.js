@@ -80,4 +80,15 @@ describe('Lê todas as vendas na camada Service', () => {
       });
     });
   });
+
+  describe('quando o id buscado não existe', () => {
+
+    it('retorna null', async () => {
+      const notId = await ProductsService.findById(5);
+
+      expect(notId).to.be.equal(null);
+    })
+
+  })
+
 });
