@@ -1,23 +1,23 @@
 const { expect } = require('chai');
-// const sinon = require('sinon');
-// const SalesModel = require('../../../models/salesModel');
+const sinon = require('sinon');
+const SalesModel = require('../../../models/salesModel');
 const sendError = require('../../../middlewares/sendError');
 const SalesService = require('../../../services/salesService');
 
-describe('Lê todas as vendas no BD na camada Service', () => {
+describe('Testa endpoit Sales na camada Service', () => {
 
-  describe('quando é lido com sucesso', () => {
+  describe('quando todas as Sales são lidas com sucesso', () => {
 
     it('retorna um objeto com todos os produtos', async () => {
       const response = await SalesService.getAll();
 
-      expect(response).to.be.a('array').lengthOf(3);
+      expect(response).to.be.a('array').lengthOf(1);
     });
 
     it('objeto possui o "id" do produto verificado', async () => {
-      const response = await SalesService.findById(1);
+      const response = await SalesService.findById(2);
 
-      expect(response).to.have.a('array').length(2)
+      expect(response).to.be.a('array')
     });
 
   });
@@ -78,39 +78,68 @@ describe('Lê todas as vendas no BD na camada Service', () => {
           expect(sale).to.be.eqls(error);
         });
       });
+
+      describe('Quando tenta deletar um sale', () => {
+
+        it('recebe um erro 404 se a venda não existir', async () => {
+          const error = sendError(404, 'Sale not found');
+          const sale = await SalesService.deleteSale(999);
+
+          expect(sale).to.be.eqls(error);
+        });
+      });
+
+      describe('quando cria uma venda', () => {
+
+        beforeEach(() => {
+          sinon.stub(Promise, 'all').resolves([
+            {
+              "productId": 1,
+              "quantity": 1
+            },
+            {
+              "productId": 2,
+              "quantity": 5
+            }
+          ]);
+          sinon.stub(SalesModel, 'createSales').resolves(3);
+          sinon.stub(SalesModel, 'createSalesProducts').resolves();
+        });
+
+        afterEach(() => {
+          Promise.all.restore();
+          SalesModel.createSales.restore();
+          SalesModel.createSalesProducts.restore();
+        });
+
+        it('recebe um objeto', async () => {
+          const salesProduct = await SalesService.createSales([
+            {
+              "productId": 1,
+              "quantity": 1
+            },
+            {
+              "productId": 2,
+              "quantity": 5
+            }
+          ]);
+
+          expect(salesProduct).to.be.eqls({
+            "id": 3,
+            "itemsSold": [
+              {
+                "productId": 1,
+                "quantity": 1
+              },
+              {
+                "productId": 2,
+                "quantity": 5
+              }
+            ]
+          });
+        });
+      });
     });
 
-    // describe('quando o payload informado não é válido', () => {
-    //   it('retorna um boolean', async () => {
-    //     const response = await SalesService.createProduct(payloadProduct);
-
-    //     expect(response).to.be.a('error');
-    //   })
-
-    //   it('o boolean contém "false"', async () => {
-    //     const response = await SalesService.createProduct(payloadProduct);
-
-    //     expect(response).to.be.equal(false);
-    //   })
-    // })
-
-    // describe('quando o payload informado é válido', () => {
-    //   const payloadProduct = 'ThunderCats';
-
-    //   it('retorna um objeto camada Service', async () => {
-
-    //     const response = await SalesService.createProduct(payloadProduct);
-
-    //     expect(response).to.be.a('object');
-    //   })
-
-    //   it('o objeto possui o id do novo produto inserido camada Service', async () => {
-
-    //     const response = await SalesService.createProduct(payloadProduct);
-
-    //     expect(response).to.have.a.property('id');
-    //   })
-    // })
-
-  })
+  });
 });
