@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 
 app.get('/products', Product.getAll);
 
+app.get('/products/search', Product.searchProduct);
+
 app.get('/products/:id', Product.findById);
 
 app.get('/sales', Sales.getAll);

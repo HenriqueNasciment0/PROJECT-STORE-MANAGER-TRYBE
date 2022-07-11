@@ -68,10 +68,17 @@ const deleteProduct = async (id) => {
   return Product.deleteProduct(id);
 };
 
+const searchProduct = async (search) => {
+  const searchForName = await Product.searchProduct(search);
+
+  return searchForName;
+};
+
 module.exports = {
   getAll,
   findById,
   createProduct,
   updateProduct,
   deleteProduct,
+  searchProduct,
 };

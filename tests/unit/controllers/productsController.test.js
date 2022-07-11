@@ -145,4 +145,38 @@ describe('Lê o endpoit Products na camada Controller', () => {
     });
   });
 
+  describe('quando o payload informado é válido', () => {
+
+    const request = {}
+    const response = {}
+
+    before(() => {
+      request.query = {
+        "name": "Martelo"
+      };
+
+      response.status = sinon.stub().returns(response);
+      response.json = sinon.stub().returns();
+
+      sinon.stub(ProductsService, 'searchProduct').resolves([
+        {
+          "id": 1,
+          "name": "Martelo de Thor"
+        }
+      ]);
+
+    })
+
+    after(() => {
+      ProductsService.searchProduct.restore();
+    })
+
+    it('é chamado com o código 200', async () => {
+      await ProductsController.searchProduct(request, response);
+
+      expect(response.status.calledWith(200)).to.be.equal(true);
+    })
+
+  })
+
 });
