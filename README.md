@@ -267,3 +267,9 @@ npm run test:mocha
 - Seus testes da `model` devem fazer mock do banco de dados obrigatóriamente;
 - Opcionalmente você pode parar o serviço do `MYSQL` em sua máquina. Para rodar seus teste utilize `npm run test:mocha`;
 - Antes de executar os testes da Trybe, seus testes não devem conter erros.
+
+<div> 
+  <a href = "mailto:hsncorretor@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/henriquen-dev/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+    <a href="https://instagram.com/henrique.s.nasc" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a> 
+</div>
