@@ -89,12 +89,6 @@ describe('Lê testes de Sales camada Controller', () => {
         SalesService.findById.restore();
       });
 
-      // it('é chamado o método "status" passando o código 200', async () => {
-      //   await ProductsController.findById(request, response);
-
-      //   expect(response.status.calledWith(200)).to.be.equal(true);
-      // });
-
       it('é chamado o método "json" passando um objeto', async () => {
         await SalesController.findById(request, response);
 

@@ -31,18 +31,6 @@ describe('Lê o endpoit Products na camada Controller', () => {
         ProductsService.findById.restore();
       });
 
-      // it('é chamado o método "status" passando 404', async () => {
-      //   await ProductsController.findById(request, response);
-
-      //   expect(response.status.calledWith(404)).to.be.equal(true);
-      // });
-
-      // it('é chamado o método "send" passando a mensagem "Product not found"', async () => {
-      //   await ProductsController.findById(request, response);
-
-      //   expect(response.send.calledWith('Product not found')).to.be.equal(true);
-      // });
-
     });
   });
 
@@ -70,12 +58,6 @@ describe('Lê o endpoit Products na camada Controller', () => {
     after(() => {
       ProductsService.findById.restore();
     });
-
-    // it('é chamado o método "status" passando o código 200', async () => {
-    //   await ProductsController.findById(request, response);
-
-    //   expect(response.status.calledWith(200)).to.be.equal(true);
-    // });
 
     it('é chamado o método "json" passando um objeto', async () => {
       await ProductsController.findById(request, response);
